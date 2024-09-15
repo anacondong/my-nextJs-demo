@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    image: anacondong/my-nextjs-demo:latest
+    container_name: my-nextjs-demo
+    ports:
+      - "3000:3000"
+    # environment:
+      # Add your environment variables here
+      # - NODE_ENV=production
+      # - API_URL=https://api.example.com
+    # restart: unless-stopped
