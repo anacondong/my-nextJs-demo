@@ -8,7 +8,7 @@ export interface Todo {
   createdAt: string;
 }
 
-let todos: Todo[] = []; // In-memory todos array
+const todos: Todo[] = []; // In-memory todos array
 
 export function getTodos(): Todo[] {
   return todos;
