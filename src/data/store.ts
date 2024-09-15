@@ -1,4 +1,3 @@
-
 import { v4 as uuidv4 } from "uuid";
 
 export interface Todo {
@@ -25,7 +24,10 @@ export function addTodo(title: string): Todo {
   return newTodo;
 }
 
-export function updateTodo(id: string, updatedFields: Partial<Omit<Todo, "id" | "createdAt">>): Todo | undefined {
+export function updateTodo(
+  id: string,
+  updatedFields: Partial<Omit<Todo, "id" | "createdAt">>,
+): Todo | undefined {
   const todo = todos.find((t) => t.id === id);
   if (todo) {
     Object.assign(todo, updatedFields);
@@ -41,4 +43,3 @@ export function deleteTodo(id: string): boolean {
   }
   return false;
 }
-

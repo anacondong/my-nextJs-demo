@@ -2,9 +2,9 @@ name: Prettier Check
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   prettier:
@@ -22,5 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Prettier
+      - name: Run Prettier write
+        run: npx prettier --write .
+
+      - name: Run Prettier check
         run: npx prettier --check .

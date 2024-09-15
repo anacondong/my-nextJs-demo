@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -66,10 +65,19 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
         onChange={toggleCompleted}
         disabled={isUpdating}
       />
-      <span style={{ ...styles.todoTitle, textDecoration: todo.completed ? "line-through" : "none" }}>
+      <span
+        style={{
+          ...styles.todoTitle,
+          textDecoration: todo.completed ? "line-through" : "none",
+        }}
+      >
         {todo.title}
       </span>
-      <button onClick={deleteTodo} disabled={isDeleting} style={styles.deleteButton}>
+      <button
+        onClick={deleteTodo}
+        disabled={isDeleting}
+        style={styles.deleteButton}
+      >
         {isDeleting ? "Deleting..." : "Delete"}
       </button>
     </div>
@@ -98,4 +106,3 @@ const styles = {
 };
 
 export default TodoItem;
-

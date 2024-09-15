@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -14,12 +13,9 @@ const TodoList: React.FC = () => {
   return (
     <div>
       {todos && todos.length === 0 && <p>No todos yet. Add one below!</p>}
-      {todos?.map((todo: Todo) => (
-        <TodoItem key={todo.id} todo={todo} />
-      ))}
+      {todos?.map((todo: Todo) => <TodoItem key={todo.id} todo={todo} />)}
     </div>
   );
 };
 
 export default TodoList;
-

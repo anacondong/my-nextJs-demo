@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -76,4 +75,3 @@ const styles = {
 };
 
 export default NewTodoForm;
-

@@ -1,4 +1,3 @@
-
 import useSWR from "swr";
 
 export interface Todo {
@@ -20,4 +19,3 @@ export default function useTodos() {
     mutate,
   };
 }
-

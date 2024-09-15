@@ -1,4 +1,3 @@
-
 "use client";
 
 import Head from "next/head";
@@ -10,7 +9,10 @@ const Home: React.FC = () => {
     <div style={styles.container}>
       <Head>
         <title>Next.js TODO List Demo</title>
-        <meta name="description" content="A simple Next.js demo for a TODO list." />
+        <meta
+          name="description"
+          content="A simple Next.js demo for a TODO list."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -35,4 +37,3 @@ const styles = {
 };
 
 export default Home;
-
