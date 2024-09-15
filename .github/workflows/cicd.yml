@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install 
+      - name: Install
         run: npm install
 
       - name: Cache Node.js dependencies
@@ -29,15 +29,8 @@ jobs:
           key: ${{ runner.os }}-npm-cache-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
-        run: |
-          export NODE_ENV=development
-          npm ci --include=dev
+        run: npm ci
 
-  code-quality:
-    name: Code Quality Checks
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
       - name: Run Prettier write
         run: npx prettier --write .
 
@@ -50,7 +43,7 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest
-    needs: code-quality
+    needs: setup
     steps:
       - name: Run tests
         run: npm test
