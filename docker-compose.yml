@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   web:
@@ -7,7 +7,7 @@ services:
     ports:
       - "3000:3000"
     # environment:
-      # Add your environment variables here
-      # - NODE_ENV=production
-      # - API_URL=https://api.example.com
+    # Add your environment variables here
+    # - NODE_ENV=production
+    # - API_URL=https://api.example.com
     # restart: unless-stopped
